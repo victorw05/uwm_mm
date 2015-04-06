@@ -1,0 +1,22 @@
+<smil> 
+  <head> 
+   <layout> 
+     <root-layout height="140" width="210" background-color="#ffffff" title="Elements"/> 
+     <region id="text" width="210" height="20" top="0" left="0" z-index="2"/> 
+     <!-- <region id="textbox2" width="210" height="20" bottom="0" left="0" z-index="3" /> -->
+     <!-- <region id="welcome_vid" width="210" height="120" top="20" left="0" z-index="1" /> -->
+     <region id="welcomeimg" width="210" height="120" top="20" left="0" z-index="1" /> 
+   </layout> 
+  </head> 
+
+ <body> 
+  <seq> 
+   <text src="/uwm/sample.txt" region="text" begin="1.00s" dur="4.00s" />
+   <!-- <img src="/uwm/uwm1.gif" region="welcomeimg" begin="1.00s" dur="5.00s" /> -->
+   <!-- <audio src="/uwm/sample.wav" begin="4.00s" dur="7.00s" system-bitrate="14000" /> -->
+   <!-- <video src="/uwm/uwm_welcome.mp4" region="welcome_vid" system-bitrate="80000" /> -->
+         
+   </seq> 
+  </body> 
+  
+</smil> 

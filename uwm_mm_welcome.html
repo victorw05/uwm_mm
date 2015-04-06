@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Welcome to UWM</title>
+		<link rel="stylesheet" type="text/css" href="/uwm/mm.css" />
+		<script type="text/javascript" src="/uwm/mm.js" ></script>	
+	</head>
+	<body>
+	
+	Hello
+	
+	<!-- <video src="/uwm/uwm_mm_welcome.smil" height="320" width="240"> -->
+ 
+		   <OBJECT id=qt_embed CLASSID="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"
+		   CODEBASE="http://www.apple.com/qtactivex/qtplugin.cab"
+		   HEIGHT="320"
+		   WIDTH="240">
+		 
+		   	<PARAM NAME="src" VALUE="/uwm/uwm_welcome.mp4" >
+		   	<paramname="autoplay" value="true">
+        		<paramname="controller" value="true">
+		   	<EMBED
+				HEIGHT=320
+				WIDTH=240
+				TYPE="video/quicktime"
+				PLUGINSPAGE="http://www.apple.com/quicktime/download/"
+				SRC="/uwm/sample.mov"
+				QTSRC="/uwm/uwm_mm_welcome.smil"
+				autoplay="true" 
+        			controller="true" 
+        			loop="false"
+    
+			/>
+			<!-- QTSRC="/uwm/uwm_mm_welcome.smil" -->
+			<!-- SRC="/uwm/sample.mov" -->
+		   </OBJECT>
+ 
+	<!-- </video> -->
+	
+	<OBJECT ID=real_embed CLASSID="clsid:CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA" WIDTH="320" HEIGHT="240">
+		<PARAM name="src" value= "/uwm/uwm_mm_welcome.smil">
+		<PARAM name="autostart" value="true">
+		<PARAM name="controls" value="All">
+		<PARAM name="console" value="one">
+			<EMBED TYPE="audio/x-pn-realaudio-plugin"
+				SRC="/uwm/uwm_mm_welcome.smil"
+				WIDTH="320"
+				HEIGHT="240"
+				AUTOSTART="true"
+				CONTROLS="All"
+				CONSOLE="one">
+			</EMBED>
+	</OBJECT>
+	
+	<video width="80%" controls>
+		  <source src="/uwm/uwm_welcome.mp4" type="video/mp4">
+		  Your browser does not support the video tag.
+	</video>
+	</body>
+</html>

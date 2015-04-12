@@ -25,13 +25,13 @@ img#logo {
 #splash_page_container {
 	min-height: 100%;
 	width: 100%;
-	background: linear-gradient(#ffffff, #888888);
+	background: linear-gradient(#ffffff, #aaaaaa);
 }
 
 #splash_page_container_background {
 	min-height: 100%;
 	width: 100%;
-	background: url("images/shattered2.png") repeat;
+	background: url("image/shattered2.png") repeat;
 	background-color: rgba(0, 0, 0, 0.5);
 }
 

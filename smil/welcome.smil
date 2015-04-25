@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 2.0//EN"
+                      "http://www.w3.org/2008/SMIL30/SMIL30Language.dtd">
+<smil xmlns="http://www.w3.org/ns/SMIL" xmlns:rn="http://features.real.com/2001/SMIL20/Extensions">
+          <head>
+                    <meta name="author" content="Dick Bulterman"/>
+                    <meta name="title" content="Welcome to UWM"/>
+                    <meta name="duration" content="02:50"/>
+                    <layout>
+                              <root-layout id="root_layout" backgroundColor="black" width="1280" height="720"/>
+                              <region id="audio1_region"/>
+				<region id="audio2_region"/>
+                              <region id="background_region" fit="fill" />
+                              <region id="video_region" left="200" width="854" top="60" height="480" z-index="1" fit="meet"/>
+				<region id="subtitle_region" left="400" width="454" top="500" height="48" z-index="2" />
+				<region id="logo_region" left="0" width="150" height="150" />
+                              <region id="nav1_region" left="300" width="64" top="600" height="64" z-index="1" fit="meet"/>
+				<region id="nav2_region" left="450" width="64" top="600" height="64" z-index="1" fit="meet"/>
+				<region id="nav3_region" left="600" width="64" top="600" height="64" z-index="1" fit="meet"/>
+				<region xml:id="nav4_region" left="750" width="64" top="600" height="64" z-index="1" fit="meet"/>
+				<region xml:id="nav5_region" left="900" width="64" top="600" height="64" z-index="1" fit="meet"/>
+                    </layout>
+          </head>
+          <body>
+                    <par xml:id="par_main">
+				<img src="../image/logo_shield.png" region="logo_region" />
+				<img src="../image/shattered.png" region="background_region" fill="freeze"/>
+                              <seq xml:id="sequence_main">
+					<par>
+                                                <video xml:id="video_welcome" region="video_region" dur="35s" src="../video/welcome_med.mp4" end="student_life_link.activateEvent" >
+                                                </video>
+						<seq>
+							<smilText id="subtitle_smiltext" region="subtitle_region" dur="6s" textFontSize="xx-large" textFontFamily="roman" >
+									Welcome 
+								<tev begin="1"/>
+								<span textBackgroundColor="blue" textColor="white">
+									to
+								</span>
+								<tev begin="3"/>
+									UWM 
+								<tev begin="5"/>
+									video
+							</smilText> 
+							 <smilText id="subtitle_smiltext" region="subtitle_region" dur="15s" textFontSize="xx-large" textFontFamily="roman" >
+								       Your 
+								<tev begin="1"/>
+								<span textBackgroundColor="blue" textColor="white">
+									future
+								</span>
+								<tev begin="3"/>
+									destination
+								<tev begin="5"/>
+                                                                for school
+                                                	</smilText> 
+						</seq>	
+					</par>
+					<par id="student_life_par">
+						<video id="student_life_welcome" start="student_life_link.activateEvent" region="video_region" dur="15s" src="../video/student_life_med.mp4" >
+                                                </video>
+						<!-- <excl dur="indefinite"> -->
+								<audio id="student_life_audio" region="audio1_region" src="../audio/student_life.m4a" dur="35s"/> 
+      						<!--	<par id="student_life_audio_ar_par" begin="engineer_logo.activateEvent" > -->
+								<audio id="student_life_ar_audio" begin="engineer_logo.activateEvent" region="audio2_region" src="../audio/sample.m4a" dur="35s"/>
+						<!-- </excl> -->
+					</par>
+                              </seq>
+				<img id="engineer_logo" src="../image/engineer.png" region="nav1_region" >
+					<area href="#video_welcome" external="true" sendTo="_rpbrowser" /> 
+				</img>
+				<img id="student_life_logo" src="../image/comedy.png" region="nav2_region" >
+					<area id="student_life_link" href="#student_life_par" />
+                                </img>
+				<img id="map_logo" src="../image/map.png" region="nav3_region" >
+					<area href="#student_life_auido_ar_par" />
+				</img>
+				<img id="engineer_logo" src="../image/engineer.png" region="nav4_region" >
+				</img>
+				<a href="splash.html">
+				<img id="art_logo" src="../image/jump.png" region="nav5_region" >
+					<area href="splash.html" external="true" sendTo="_rpbrowser" />  
+				</img>
+				</a>
+                    </par>
+          </body>
+</smil>
